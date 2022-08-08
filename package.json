@@ -1,12 +1,12 @@
 {
   "name": "@enab/core",
-  "version": "1.1.4",
+  "type": "module",
+  "version": "1.1.5",
   "license": "MIT",
   "exports": {
-    ".": {
+    "./v1": {
       "import": "./dist/index.mjs"
-    },
-    "./*": "./*"
+    }
   },
   "main": "./dist/module.cjs",
   "types": "./dist/index.d.ts",
