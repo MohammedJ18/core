@@ -1,7 +1,7 @@
 {
   "name": "@enab/core",
   "type": "module",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "license": "MIT",
   "exports": {
     "./v1": {
@@ -16,9 +16,7 @@
   ],
   "scripts": {
     "prepack": "nuxt-module-build",
-    "dev": "nuxi dev playground",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+    "dev": "nuxi dev playground"
   },
   "dependencies": {
     "@iconify/json": "^2.1.77",
