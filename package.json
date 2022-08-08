@@ -1,17 +1,15 @@
 {
   "name": "@enab/core",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "license": "MIT",
-  "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "import": "./dist/index.mjs"
     },
-    "./**": "./**"
+    "./*": "./*"
   },
   "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -22,7 +20,6 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
-    "@enab/ui": "^1.2.7",
     "@iconify/json": "^2.1.77",
     "@nuxt/kit": "^3.0.0-rc.6",
     "@nuxtjs/color-mode": "^3.1.4",
