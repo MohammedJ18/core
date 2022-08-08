@@ -1,6 +1,6 @@
 {
   "name": "@enab/core",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -8,10 +8,7 @@
       "import": "./dist/module.mjs",
       "require": "./dist/module.cjs"
     },
-    "./useAppManager": {
-      "import": "./dist/runtime/composables/useAppManager.mjs",
-      "types": "./dist/runtime/composables/useAppManager.d.ts"
-    }
+    "./*": "./*"
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
