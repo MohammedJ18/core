@@ -8,17 +8,12 @@ export default defineNuxtConfig({
     autoImports: {
         global: true
     },
-    components: {
-        global: true,
-        dirs: [
-            '~/components',
-        ]
-    },
+
     modules: [
         MyModule,
         '@pinia/nuxt',
         '@vueuse/nuxt',
-        '@enab/ui',
+        // '@enab/ui',
         '@unocss/nuxt',
         "@nuxtjs/color-mode",
     ],

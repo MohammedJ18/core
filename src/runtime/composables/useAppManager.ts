@@ -1,4 +1,6 @@
 import { acceptHMRUpdate, defineStore } from "pinia";
+import App from "../classes/App"
+import Widget from "../classes/Widget"
 
 export const useAppManager = defineStore("app-manager", {
     state: () => ({

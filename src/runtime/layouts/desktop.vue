@@ -14,25 +14,20 @@
 </template>
 
 <script setup>
-const [state, toggle] = useToggle(false);
+import { useRouter, useRoute } from 'vue-router'
+import { useHead } from '@vueuse/head';
+import { useToggle, useMouse, useWindowSize } from '@vueuse/core'
+import { useAppManager } from '../composables/useAppManager';
+
 const route = useRoute();
+
+const [state, toggle] = useToggle(false);
 
 const appManager = useAppManager()
 
 
 const { x, y, sourceType } = useMouse()
 const { width, height } = useWindowSize()
-
-// const anyRunningIsMaximized = computed(() => appsStore.anyRunningIsMaximized)
-// const positionBottom = computed(() => height.value - y.value <= 75)
-
-// onKeyStroke(['Escape'], (e) => {
-//   // e.ctrlKey
-//   // e.shiftKey
-//   // e.altKey
-//   appsStore.closeWindow();
-//   e.preventDefault()
-// })
 
 useHead({
   meta: [

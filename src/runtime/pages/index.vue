@@ -39,6 +39,8 @@
 </template>
 
 <script setup>
+import { useAppManager } from '../composables/useAppManager';
+
 definePageMeta({
   title: "Home",
 });
