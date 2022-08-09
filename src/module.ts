@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { fileURLToPath } from 'url'
-import { defineNuxtModule, addPlugin } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, addAutoImport } from '@nuxt/kit'
 import path from "path";
 import * as fs from 'fs';
 
@@ -21,6 +21,7 @@ export default defineNuxtModule<ModuleOptions>({
     // if (options.addPlugin) {}
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
+    // nuxt.options.alias.core = (runtimeDir)
     addPlugin(resolve(runtimeDir, 'plugin'))
 
     // Components Hooks
@@ -36,6 +37,7 @@ export default defineNuxtModule<ModuleOptions>({
       dirs.push(resolve(runtimeDir, 'composables'))
       dirs.push(resolve(runtimeDir, 'classes'))
     })
+
 
     // Layouts
     nuxt.hook('app:templates', (app) => {
