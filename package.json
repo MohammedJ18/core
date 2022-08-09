@@ -1,13 +1,14 @@
 {
   "name": "@enab/core",
   "type": "module",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "license": "MIT",
   "exports": {
     ".": {
       "import": "./dist/module.mjs",
       "require": "./dist/module.cjs"
-    }
+    },
+    "./composables": "./dist/composables.mjs"
   },
   "main": "./dist/module.cjs",
   "types": "./dist/module.d.ts",
