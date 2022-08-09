@@ -1,7 +1,7 @@
 {
   "name": "@enab/core",
   "type": "module",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "license": "MIT",
   "exports": {
     ".": {
@@ -9,7 +9,7 @@
       "require": "./dist/module.cjs"
     },
     "./i": {
-      "import": "./dist/index.d.ts"
+      "import": "./dist/index.ts.d.ts"
     }
   },
   "main": "./dist/module.cjs",
