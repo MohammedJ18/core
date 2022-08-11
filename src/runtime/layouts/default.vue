@@ -8,8 +8,7 @@
 
 
 <script setup>
-import { useRouter, useRoute } from 'vue-router'
-import { useHead } from '@vueuse/head';
+import { useRouter, useRoute, useHead} from '#imports'
 
 const route = useRoute();
 

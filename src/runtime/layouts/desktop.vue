@@ -14,9 +14,7 @@
 </template>
 
 <script setup>
-import { useRouter, useRoute } from 'vue-router'
-import { useHead } from '@vueuse/head';
-import { useToggle, useMouse, useWindowSize } from '@vueuse/core'
+import { useHead, useToggle, useMouse, useWindowSize, useRouter, useRoute } from '#imports';
 import { useAppManager } from '../composables/useAppManager';
 
 const route = useRoute();
