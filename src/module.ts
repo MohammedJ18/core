@@ -36,6 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.hook('autoImports:dirs', (dirs) => {
       dirs.push(resolve(runtimeDir, 'composables'))
       dirs.push(resolve(runtimeDir, 'classes'))
+      dirs.push(resolve(runtimeDir, 'middleware'))
     })
 
 
@@ -61,6 +62,14 @@ export default defineNuxtModule<ModuleOptions>({
         file: resolve(runtimeDir, 'pages/index.vue'),
       })
     })
+
+
+    // Supabase 
+    nuxt.options['supabase'] = {
+      url: 'https://xjrkpvotkmsqephyfmya.supabase.co',
+      key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhqcmtwdm90a21zcWVwaHlmbXlhIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjAyOTc3MjYsImV4cCI6MTk3NTg3MzcyNn0.3doSjk0JXDL8EtfmNjqz3iUx43NrvWgcLkIRhsyvAnM'
+    }
+
 
   }
 })

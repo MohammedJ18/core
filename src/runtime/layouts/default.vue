@@ -8,7 +8,8 @@
 
 
 <script setup>
-import { useRouter, useRoute, useHead} from '#imports'
+import { useRouter, useRoute, useHead } from '#imports'
+
 
 const route = useRoute();
 

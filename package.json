@@ -1,7 +1,7 @@
 {
   "name": "@enab/core",
   "type": "module",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "license": "MIT",
   "exports": {
     ".": {
@@ -21,6 +21,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
+    "@enab/ui": "^1.4.4",
     "@iconify/json": "^2.1.77",
     "@nuxt/image-edge": "^1.0.0-27628766.3629b9a",
     "@nuxt/kit": "^3.0.0-rc.6",
@@ -50,5 +51,8 @@
     "vue-toastification": "^2.0.0-rc.5"
   },
   "description": "## Development",
-  "author": "Hasan Alkarnosy"
+  "author": "Hasan Alkarnosy",
+  "devDependencies": {
+    "@nuxtjs/supabase": "^0.1.19"
+  }
 }

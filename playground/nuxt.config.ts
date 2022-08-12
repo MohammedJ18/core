@@ -11,9 +11,10 @@ export default defineNuxtConfig({
 
     modules: [
         MyModule,
+        '@nuxtjs/supabase',
         '@pinia/nuxt',
         '@vueuse/nuxt',
-        // '@enab/ui',
+        '@enab/ui',
         '@unocss/nuxt',
         "@nuxtjs/color-mode",
     ],

@@ -40,9 +40,11 @@
 
 <script setup>
 import { useAppManager } from '../composables/useAppManager';
+import auth from '../middleware/auth'
 
 definePageMeta({
   title: "Home",
+  middleware: auth
 });
 
 
