@@ -40,7 +40,8 @@
 
 <script setup>
 import { useAppManager } from '../composables/useAppManager';
-import auth from '../middleware/auth'
+import { auth } from '../middleware/auth'
+import { useRouter, useUser, useSupabaseUser } from '#imports'
 
 definePageMeta({
   title: "Home",
@@ -49,6 +50,16 @@ definePageMeta({
 
 
 const appManager = useAppManager();
+
+const user = useUser()
+const supabase = useSupabaseClient()
+const router = useRouter()
+
+user.value = useSupabaseUser()
+supabase.auth.onAuthStateChange((_, session) => {
+    user.value = session?.user
+    if (user.value) router.push('/')
+})
 </script>
 
 

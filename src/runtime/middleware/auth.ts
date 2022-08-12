@@ -1,11 +1,10 @@
-import { defineNuxtRouteMiddleware, useSupabaseUser } from '#imports'
+import { defineNuxtRouteMiddleware } from '#app'
+import { useSupabaseUser } from '#imports'
 
-export default defineNuxtRouteMiddleware((to, _from) => {
-    console.log('auth middleware')
+export const auth = defineNuxtRouteMiddleware((to, _from) => {
     const user = useSupabaseUser()
-
     if (!user.value) {
-      return navigateTo('/login')
+      return navigateTo('/auth')
     }
   })
   

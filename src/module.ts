@@ -22,7 +22,7 @@ export default defineNuxtModule<ModuleOptions>({
     const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
     nuxt.options.build.transpile.push(runtimeDir)
     // nuxt.options.alias.core = (runtimeDir)
-    addPlugin(resolve(runtimeDir, 'plugin'))
+    addPlugin(resolve(runtimeDir, 'plugins/toast'))
 
     // Components Hooks
     nuxt.hook('components:dirs', (dirs) => {
@@ -57,10 +57,8 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Pages (Desktop Page)
     nuxt.hook('pages:extend', (pages) => {
-      pages.push({
-        path: '/',
-        file: resolve(runtimeDir, 'pages/index.vue'),
-      })
+      pages.push({ path: '/', file: resolve(runtimeDir, 'pages/index.vue')})
+      pages.push({ path: '/auth', file: resolve(runtimeDir, 'pages/auth.vue')})
     })
 
 
