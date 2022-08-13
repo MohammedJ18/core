@@ -4,6 +4,7 @@
       <!-- Desktop Applications & Icons -->
       <div min-w="1/4" grid="~ cols-4 auto-rows-min" m="70px">
         <ClientOnly>
+          <div v-if="appManager.getOwned.length <= 0" h="64px" w="64px" class="i-line-md-loading-twotone-loop"></div>
           <div v-for="component in appManager.getOwned" :key="'app-' + component.id">
             <UiDesktopIcon :app="component" />
 
@@ -41,7 +42,7 @@
 <script setup>
 import { useAppManager } from '../composables/useAppManager';
 import { auth } from '../middleware/auth'
-import { useRouter, useUser, useSupabaseUser } from '#imports'
+import { useRouter, useSupabaseUser, useUser } from '#imports'
 
 definePageMeta({
   title: "Home",
@@ -49,17 +50,32 @@ definePageMeta({
 });
 
 
-const appManager = useAppManager();
-
 const user = useUser()
 const supabase = useSupabaseClient()
 const router = useRouter()
 
-user.value = useSupabaseUser()
-supabase.auth.onAuthStateChange((_, session) => {
-    user.value = session?.user
-    if (user.value) router.push('/')
-})
+
+// let { data, error } = await supabase
+//   .rpc('buyApp', {
+//     app_id: 3,
+//     user_id: user.value.id
+//   })
+
+// if (error) console.error(error)
+// else console.log(data)
+
+
+
+
+// user.value = useSupabaseUser()
+// supabase.auth.onAuthStateChange((_, session) => {
+//     user.value = session?.user
+// })
+
+const appManager = useAppManager();
+appManager.fetch()
+
+appManager.buy(3)
 </script>
 
 

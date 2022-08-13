@@ -21,7 +21,7 @@ export default class App {
 
     solid: boolean;
 
-    parentApp: string;
+    core: boolean;
 
     points: number;
 
@@ -44,13 +44,14 @@ export default class App {
         this.running = args.running ?? false
         this.zIndex = args.zIndex ?? 20
         this.locked = args.locked ?? false
-        this.owned = args.owned ?? false
+
+        this.owned = args.users_apps && args.users_apps.length > 0
+
+        this.core = args.core ?? false
 
         this.utility = args.utility ?? false
 
         this.solid = args.solid ?? false
-
-        this.parentApp = args.parentApp ?? ''
 
         this.size = args.size ?? "w-2xl h-lg"
 
