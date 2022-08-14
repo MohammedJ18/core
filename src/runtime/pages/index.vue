@@ -55,11 +55,7 @@ const supabase = useSupabaseClient()
 const router = useRouter()
 
 
-// let { data, error } = await supabase
-//   .rpc('buyApp', {
-//     app_id: 3,
-//     user_id: user.value.id
-//   })
+
 
 // if (error) console.error(error)
 // else console.log(data)
@@ -74,6 +70,7 @@ const router = useRouter()
 
 const appManager = useAppManager();
 appManager.fetch()
+// appManager.buyApp(3)
 </script>
 
 

@@ -36,7 +36,7 @@ export const useAppManager = defineStore("app-manager", {
         addApp(app){
             // this.apps.push(new App({ id:this.apps.length+1, ...app}));
         },
-        async buy(app_id){
+        async buyApp(app_id){
             const { $toast } = useNuxtApp()
             const supabase = useSupabaseClient()
             const user = useUser()
@@ -46,7 +46,8 @@ export const useAppManager = defineStore("app-manager", {
                     _user_id: user.value.id
                 })
             if (error){ $toast.error('حدث خطأ اثناء شراء التطبيق'); return false }
-            if (!data) { $toast.error('حدث خطأ اثناء شراء التطبيق'); return false }
+            if (!data) { $toast.error('لاتمتلك مايكفي من النقاط'); return false }
+            this.fetch();
         }
     },
 });
