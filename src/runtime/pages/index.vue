@@ -74,8 +74,6 @@ const router = useRouter()
 
 const appManager = useAppManager();
 appManager.fetch()
-
-appManager.buy(3)
 </script>
 
 
