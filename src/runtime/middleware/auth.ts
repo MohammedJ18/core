@@ -1,4 +1,4 @@
-import { defineNuxtRouteMiddleware } from '#app'
+import { defineNuxtRouteMiddleware, navigateTo } from '#app'
 import { useSupabaseUser } from '#imports'
 import { useUser } from '../composables/states'
 

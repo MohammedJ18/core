@@ -1,4 +1,4 @@
-import { defineNuxtRouteMiddleware } from '#app'
+import { defineNuxtRouteMiddleware, navigateTo } from '#app'
 import { useSupabaseUser } from '#imports'
 
 export const guest = defineNuxtRouteMiddleware((to, _from) => {

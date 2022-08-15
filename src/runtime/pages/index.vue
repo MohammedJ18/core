@@ -62,7 +62,6 @@ const router = useRouter()
 
 
 
-
 // user.value = useSupabaseUser()
 // supabase.auth.onAuthStateChange((_, session) => {
 //     user.value = session?.user
