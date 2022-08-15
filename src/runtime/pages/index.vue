@@ -42,30 +42,11 @@
 <script setup>
 import { useAppManager } from '../composables/useAppManager';
 import { auth } from '../middleware/auth'
-import { useRouter, useSupabaseUser, useUser } from '#imports'
 
 definePageMeta({
   title: "Home",
   middleware: auth
 });
-
-
-const user = useUser()
-const supabase = useSupabaseClient()
-const router = useRouter()
-
-
-
-
-// if (error) console.error(error)
-// else console.log(data)
-
-
-
-// user.value = useSupabaseUser()
-// supabase.auth.onAuthStateChange((_, session) => {
-//     user.value = session?.user
-// })
 
 const appManager = useAppManager();
 appManager.fetch()

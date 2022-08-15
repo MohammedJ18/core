@@ -34,7 +34,8 @@ export const useAppManager = defineStore("app-manager", {
             this.focused = id;
         },
         addApp(app){
-            // this.apps.push(new App({ id:this.apps.length+1, ...app}));
+            app.title = `[ ${app.title} ]`
+            this.apps.push(new App({ id:this.apps.length+1, ...app}));
         },
         async buyApp(app_id){
             const { $toast } = useNuxtApp()
