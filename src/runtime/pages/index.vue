@@ -45,6 +45,7 @@
 
 <script setup>
 import { useAppManager } from '../composables/useAppManager';
+import { useUserProfile } from '../composables/useUserProfile';
 import { auth } from '../middleware/auth'
 
 
@@ -55,9 +56,12 @@ definePageMeta({
 });
 
 const appManager = useAppManager();
+const userProfile = useUserProfile();
 appManager.fetch()
+userProfile.fetch()
+
 // appManager.buyApp(3)
-console.log(appManager.getCoreApps)
+// console.log(appManager.getCoreApps)
 </script>
 
 

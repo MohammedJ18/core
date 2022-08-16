@@ -19,6 +19,7 @@ export const useAppManager = defineStore("app-manager", {
         getApp: state => id => state.apps.find(app => app.id === id),
         getRunningApps: (state) => state.apps.filter(app => app.running),
         getFocused: (state) => state.apps.find(app => app.id == state.focused),
+        getDevelopmentApps: state => state.developmentApps,
         anyRunningIsMaximized: (state) => state.apps.some(app => app.maximized && app.running && !app.minimized),
     },
 

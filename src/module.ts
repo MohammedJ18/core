@@ -23,6 +23,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.build.transpile.push(runtimeDir)
     // nuxt.options.alias.core = (runtimeDir)
     addPlugin(resolve(runtimeDir, 'plugins/toast'))
+    addPlugin(resolve(runtimeDir, 'plugins/addApps'))
 
     // Components Hooks
     nuxt.hook('components:dirs', (dirs) => {
