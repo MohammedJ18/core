@@ -26,13 +26,11 @@
       </div>
 
 
-      <Teleport to="#openedwindows">
         <TransitionGroup name="window">
           <div v-for="component in appManager.getRunningApps" :key="'app-' + component.id">
             <component :app="component" :is="component.name" :key="'app-component-' + component.id"></component>
           </div>
         </TransitionGroup>
-      </Teleport>
 
 
       <!-- Desktop Widgets -->
@@ -59,6 +57,7 @@ definePageMeta({
 const appManager = useAppManager();
 appManager.fetch()
 // appManager.buyApp(3)
+console.log(appManager.getCoreApps)
 </script>
 
 
