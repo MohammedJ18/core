@@ -7,6 +7,8 @@ export const useAppManager = defineStore("app-manager", {
     state: () => ({
         focused: "",
         apps: [],
+        developmentApps: [],
+        appLayers: [], // Focusing and ordering of apps windows
     }),
 
     getters: {
@@ -29,13 +31,20 @@ export const useAppManager = defineStore("app-manager", {
 
             if (error){ $toast.error('حدث خطأ اثناء تحميل التطبيقات'); return false }
             this.apps = apps.map(app => new App(app))
+            this.apps.push(...this.developmentApps)
         },
-        setFocus(id){
+        async setFocus(id){
+            this.appLayers = this.appLayers.filter(app_id => app_id !== id)
+            this.appLayers.push(id)
             this.focused = id;
         },
         addApp(app){
+            if (!process.dev) return;
             app.title = `[ ${app.title} ]`
-            this.apps.push(new App({ id:this.apps.length+1, ...app}));
+            let newApp = new App(app)
+            newApp.owned = true
+            newApp.id = (this.developmentApps.length + 1) + 1000000
+            this.developmentApps.push(newApp);
         },
         async buyApp(app_id){
             const { $toast } = useNuxtApp()
@@ -48,6 +57,7 @@ export const useAppManager = defineStore("app-manager", {
                 })
             if (error){ $toast.error('حدث خطأ اثناء شراء التطبيق'); return false }
             if (!data) { $toast.error('لاتمتلك مايكفي من النقاط'); return false }
+            console.log(data, error)
             this.fetch();
         }
     },

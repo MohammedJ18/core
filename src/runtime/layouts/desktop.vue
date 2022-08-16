@@ -1,6 +1,5 @@
 <template>
   <div class="bg-default" position="relative" h="screen" flex="~ col" w="screen">
-    <div id="openedwindows"></div>
     <!-- class="backdrop-blur-2xl" -->
     <div flex="grow">
       <slot />

@@ -301,6 +301,63 @@
   dependencies:
     mime "^3.0.0"
 
+"@enab/appstore@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@enab/appstore/-/appstore-1.0.4.tgz#00f44a8a0cf6f7ef59f4168c4280e7901b806496"
+  integrity sha512-jX7ZPqIKTC5qxa2AJiIR5GPe2AiI9sSb9UKACaeuYXQKE3zmVfDIFlA+0osrKSZ8E8cvIykpAVRml7CGgO12bA==
+  dependencies:
+    "@enab/calculator" "^1.0.7"
+    "@enab/core" "^1.4.4"
+    "@enab/ui" "^1.4.4"
+    "@iconify/json" "^2.1.77"
+    "@nuxt/kit" "^3.0.0-rc.8"
+    "@nuxt/schema" "^3.0.0-rc.8"
+    "@nuxtjs/color-mode" "^3.1.4"
+    "@nuxtjs/composition-api" "^0.33.0"
+    "@nuxtjs/supabase" "^0.1.19"
+    "@pinia/nuxt" "^0.3.0"
+    "@tauri-apps/api" "^1.0.2"
+    "@unocss/inspector" "^0.44.2"
+    "@unocss/nuxt" "^0.44.0"
+    "@unocss/preset-attributify" "^0.44.1"
+    "@unocss/preset-icons" "^0.44.1"
+    "@unocss/preset-typography" "^0.44.1"
+    "@unocss/preset-web-fonts" "^0.44.1"
+    "@vueuse/core" "^9.0.2"
+    "@vueuse/motion" "^2.0.0-beta.18"
+    "@vueuse/nuxt" "^9.0.2"
+    mathjs "^11.0.1"
+    nuxt-lodash "^2.2.0"
+    pinia "^2.0.16"
+    vue-toastification "^2.0.0-rc.5"
+
+"@enab/calculator@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@enab/calculator/-/calculator-1.0.7.tgz#deff0b61e5e5c403a3167eb613da36ea38ae8d23"
+  integrity sha512-7Iz58lGp0hTxXV0o4j0jlHXHJc2vKcL2rL51bjQV8xdCXJ6wgwja9IstEbDDSGBXtPC7RvYwVEdUT+jiKREjVQ==
+  dependencies:
+    "@enab/notepad" "^1.0.0"
+    "@enab/ui" latest
+    "@iconify/json" "^2.1.77"
+    "@nuxt/kit" "^3.0.0-rc.6"
+    "@nuxtjs/color-mode" "^3.1.4"
+    "@nuxtjs/composition-api" "^0.33.0"
+    "@pinia/nuxt" "^0.3.0"
+    "@tauri-apps/api" "^1.0.2"
+    "@unocss/inspector" "^0.44.2"
+    "@unocss/nuxt" "^0.44.0"
+    "@unocss/preset-attributify" "^0.44.1"
+    "@unocss/preset-icons" "^0.44.1"
+    "@unocss/preset-typography" "^0.44.1"
+    "@unocss/preset-web-fonts" "^0.44.1"
+    "@vueuse/core" "^9.0.2"
+    "@vueuse/motion" "^2.0.0-beta.18"
+    "@vueuse/nuxt" "^9.0.2"
+    mathjs "^11.0.1"
+    nuxt-lodash "^2.2.0"
+    pinia "^2.0.16"
+    vue-toastification "^2.0.0-rc.5"
+
 "@enab/core@^1.3.0":
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/@enab/core/-/core-1.3.2.tgz#14f3fc5499599039888f46eee1a14316056d0cb6"
@@ -332,6 +389,124 @@
     nuxt-lodash "^2.2.0"
     pinia "^2.0.16"
     unbuild "^0.7.6"
+    vue-toastification "^2.0.0-rc.5"
+
+"@enab/core@^1.4.1", "@enab/core@^1.4.4":
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/@enab/core/-/core-1.5.3.tgz#c635d2b747d1ba97596943b8c58a105be5819a8f"
+  integrity sha512-lRABgLIdCnVLfS1TtFxSOnG8FfQmupAJhAaAPv/2WLEziKebOT/k4KWmZzB9M1aB8dwi8UhtwKtpSkthWP81hA==
+  dependencies:
+    "@enab/ui" "^1.4.4"
+    "@iconify/json" "^2.1.77"
+    "@nuxt/image-edge" "^1.0.0-27628766.3629b9a"
+    "@nuxt/kit" "^3.0.0-rc.8"
+    "@nuxt/module-builder" "^0.1.7"
+    "@nuxt/schema" "^3.0.0-rc.8"
+    "@nuxtjs/color-mode" "^3.1.4"
+    "@nuxtjs/composition-api" "^0.33.0"
+    "@nuxtjs/eslint-config-typescript" latest
+    "@pinia/nuxt" "^0.3.0"
+    "@tauri-apps/api" "^1.0.2"
+    "@types/node" "^18.6.4"
+    "@unocss/inspector" "^0.44.2"
+    "@unocss/nuxt" "^0.44.0"
+    "@unocss/preset-attributify" "^0.44.1"
+    "@unocss/preset-icons" "^0.44.1"
+    "@unocss/preset-typography" "^0.44.1"
+    "@unocss/preset-web-fonts" "^0.44.1"
+    "@vueuse/core" "^9.0.2"
+    "@vueuse/motion" "^2.0.0-beta.18"
+    "@vueuse/nuxt" "^9.0.2"
+    eslint latest
+    mathjs "^11.0.1"
+    nuxt "^3.0.0-rc.6"
+    nuxt-lodash "^2.2.0"
+    pinia "^2.0.16"
+    unbuild "^0.7.6"
+    vue-toastification "^2.0.0-rc.5"
+
+"@enab/notepad@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@enab/notepad/-/notepad-1.0.0.tgz#24a1c6546581c474be94793104125befff6f7e8a"
+  integrity sha512-g4FF/vsaHnLpOvtz7mV8Qg1410YW9gmZgeSB9iosXqTV+3vF1rGhg8C4UUAQ20EnfkK8r73iRWZ9qSEWOF4VvA==
+  dependencies:
+    "@enab/ui" "^1.0.2"
+    "@iconify/json" "^2.1.77"
+    "@nuxt/kit" "^3.0.0-rc.6"
+    "@nuxtjs/color-mode" "^3.1.4"
+    "@nuxtjs/composition-api" "^0.33.0"
+    "@pinia/nuxt" "^0.3.0"
+    "@tauri-apps/api" "^1.0.2"
+    "@unocss/inspector" "^0.44.2"
+    "@unocss/nuxt" "^0.44.0"
+    "@unocss/preset-attributify" "^0.44.1"
+    "@unocss/preset-icons" "^0.44.1"
+    "@unocss/preset-typography" "^0.44.1"
+    "@unocss/preset-web-fonts" "^0.44.1"
+    "@vueuse/core" "^9.0.2"
+    "@vueuse/motion" "^2.0.0-beta.18"
+    "@vueuse/nuxt" "^9.0.2"
+    mathjs "^11.0.1"
+    nuxt-lodash "^2.2.0"
+    pinia "^2.0.16"
+    vue-toastification "^2.0.0-rc.5"
+
+"@enab/todo@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@enab/todo/-/todo-1.0.8.tgz#96145946fa8e3adbfe6f33dfecc77e9f39d6711a"
+  integrity sha512-66HbW3ltAXg16bd9NoekpRn/IbyjtZAcww3j3prKuipZP54eQ9oINKP5Nkwsj8UXn6NxK6mqPYExuOnc3wYh0g==
+  dependencies:
+    "@enab/core" "^1.4.1"
+    "@enab/ui" "^1.4.1"
+    "@iconify/json" "^2.1.77"
+    "@nuxt/kit" "^3.0.0-rc.8"
+    "@nuxt/schema" "^3.0.0-rc.8"
+    "@nuxtjs/color-mode" "^3.1.4"
+    "@nuxtjs/composition-api" "^0.33.0"
+    "@nuxtjs/supabase" "^0.1.19"
+    "@pinia/nuxt" "^0.3.0"
+    "@tauri-apps/api" "^1.0.2"
+    "@unocss/inspector" "^0.44.2"
+    "@unocss/nuxt" "^0.44.0"
+    "@unocss/preset-attributify" "^0.44.1"
+    "@unocss/preset-icons" "^0.44.1"
+    "@unocss/preset-typography" "^0.44.1"
+    "@unocss/preset-web-fonts" "^0.44.1"
+    "@vueuse/core" "^9.0.2"
+    "@vueuse/motion" "^2.0.0-beta.18"
+    "@vueuse/nuxt" "^9.0.2"
+    mathjs "^11.0.1"
+    moment "^2.29.4"
+    nuxt-lodash "^2.2.0"
+    pinia "^2.0.16"
+    vue-toastification "^2.0.0-rc.5"
+
+"@enab/ui@^1.0.2", "@enab/ui@^1.4.1", "@enab/ui@^1.4.5", "@enab/ui@latest":
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@enab/ui/-/ui-1.4.5.tgz#1c65bb982952a176d612e1077c81ceeb40ac80eb"
+  integrity sha512-7noFcP+EPlbX+3/THT3a4y3TPHK5aCfIl2Q7sVSsTvBnoeBAFCDWUopExllud1+htnfqP0AMiLHGjFHx/SmseA==
+  dependencies:
+    "@enab/core" "^1.4.1"
+    "@iconify/json" "^2.1.77"
+    "@nuxt/kit" "^3.0.0-rc.8"
+    "@nuxt/schema" "^3.0.0-rc.8"
+    "@nuxtjs/color-mode" "^3.1.4"
+    "@nuxtjs/composition-api" "^0.33.0"
+    "@nuxtjs/supabase" "^0.1.19"
+    "@pinia/nuxt" "^0.3.0"
+    "@tauri-apps/api" "^1.0.2"
+    "@unocss/inspector" "^0.44.2"
+    "@unocss/nuxt" "^0.44.0"
+    "@unocss/preset-attributify" "^0.44.1"
+    "@unocss/preset-icons" "^0.44.1"
+    "@unocss/preset-typography" "^0.44.1"
+    "@unocss/preset-web-fonts" "^0.44.1"
+    "@vueuse/core" "^9.0.2"
+    "@vueuse/motion" "^2.0.0-beta.18"
+    "@vueuse/nuxt" "^9.0.2"
+    mathjs "^11.0.1"
+    nuxt-lodash "^2.2.0"
+    pinia "^2.0.16"
     vue-toastification "^2.0.0-rc.5"
 
 "@enab/ui@^1.4.4":
@@ -525,7 +700,7 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/image-edge@^1.0.0-27628766.3629b9a":
+"@nuxt/image-edge@^1.0.0-27628766.3629b9a", "@nuxt/image-edge@^1.0.0-27657146.da85542":
   version "1.0.0-27657146.da85542"
   resolved "https://registry.yarnpkg.com/@nuxt/image-edge/-/image-edge-1.0.0-27657146.da85542.tgz#6e83fe69ddd409addd77133f8c4535da7d943556"
   integrity sha512-iMDB1KR4D/2smyShDTJ2Jf1FMj42elYOWDpkHgFZvSIf7eZcg8TVGW45lTjlp7VbQ/TgC1I0kYZBEFdc1AGXrw==
@@ -4433,6 +4608,11 @@ mlly@^0.5.2, mlly@^0.5.3, mlly@^0.5.4, mlly@^0.5.5, mlly@^0.5.7:
     acorn "^8.8.0"
     pathe "^0.3.3"
     pkg-types "^0.3.3"
+
+moment@^2.29.4:
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
+  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
 
 mri@^1.2.0:
   version "1.2.0"

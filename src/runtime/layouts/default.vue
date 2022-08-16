@@ -1,7 +1,8 @@
 <template>
   <div>
-    <!-- <UiHeader :tabs="tabs" position="absolute" left="0" /> -->
+    <div position="absolute" id="openedwindows"></div>
 
+    <!-- <UiHeader :tabs="tabs" position="absolute" left="0" /> -->
     <slot />
   </div>
 </template>
