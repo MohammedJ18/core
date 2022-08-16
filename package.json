@@ -1,7 +1,7 @@
 {
   "name": "@enab/core",
   "type": "module",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "license": "MIT",
   "exports": {
     ".": {
@@ -21,9 +21,11 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
   },
   "dependencies": {
-    "@enab/ui": "^1.4.4",
+    "@enab/appstore": "^1.0.4",
+    "@enab/todo": "^1.0.8",
+    "@enab/ui": "^1.4.5",
     "@iconify/json": "^2.1.77",
-    "@nuxt/image-edge": "^1.0.0-27628766.3629b9a",
+    "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@nuxt/kit": "^3.0.0-rc.8",
     "@nuxt/module-builder": "^0.1.7",
     "@nuxt/schema": "^3.0.0-rc.8",
