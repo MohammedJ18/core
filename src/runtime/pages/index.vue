@@ -26,11 +26,9 @@
       </div>
 
 
-        <TransitionGroup name="window">
-          <div v-for="component in appManager.getRunningApps" :key="'app-' + component.id">
-            <component :app="component" :is="component.name" :key="'app-component-' + component.id"></component>
-          </div>
-        </TransitionGroup>
+      <div position="absolute" v-for="component in appManager.getRunningApps" :key="'app-' + component.id">
+        <component :app="component" :is="component.name" :key="'app-component-' + component.id"></component>
+      </div>
 
 
       <!-- Desktop Widgets -->
@@ -87,17 +85,4 @@ userProfile.fetch()
 }
 
 
-.window-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.window-leave-active {
-  transition: all 0.3s ease-in;
-}
-
-.window-enter-from,
-.window-leave-to {
-  transform: translateX(-100px);
-  opacity: 0;
-}
 </style>
