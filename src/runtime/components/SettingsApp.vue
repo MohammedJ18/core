@@ -19,7 +19,7 @@
 
 
 <script setup>
-import { watch } from '#imports'
+import { watch, ref } from '#imports'
 import { useSupabaseClient } from '#imports'
 import { useUserProfile } from '../composables/useUserProfile'
 

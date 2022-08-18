@@ -28,6 +28,8 @@ const googleLogin = async () => {
     loading.google = true
     const { user, session, error } = await supabase.auth.signIn({
         provider: 'google',
+    }, {
+        redirectTo: process.VERCEL_URL ?? 'http://localhost:3000',
     })
 }
 
