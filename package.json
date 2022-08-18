@@ -22,8 +22,9 @@
   },
   "dependencies": {
     "@enab/appstore": "^1.0.4",
+    "@enab/core": "^1.6.6",
     "@enab/todo": "^1.0.8",
-    "@enab/ui": "^1.4.5",
+    "@enab/ui": "^1.4.7",
     "@iconify/json": "^2.1.77",
     "@nuxt/image-edge": "^1.0.0-27657146.da85542",
     "@nuxt/kit": "^3.0.0-rc.8",

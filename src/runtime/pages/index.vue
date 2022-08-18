@@ -30,6 +30,7 @@
         <component :app="component" :is="component.name" :key="'app-component-' + component.id"></component>
       </div>
 
+      <div>{{ notifications.getNotifications }}</div>
 
       <!-- Desktop Widgets -->
       <!-- <div min-w="1/4" @click="appManager.setFocus('')" flex="~" h="h-minus-bottombar" items="center" justify="center">
@@ -44,8 +45,10 @@
 <script setup>
 import { useAppManager } from '../composables/useAppManager';
 import { useUserProfile } from '../composables/useUserProfile';
+import { useNotifications } from '../composables/useNotifications';
 import { auth } from '../middleware/auth'
-
+import { useSupabaseClient } from '#imports'
+import { useUser } from '../composables/states'
 
 
 definePageMeta({
@@ -58,8 +61,24 @@ const userProfile = useUserProfile();
 appManager.fetch()
 userProfile.fetch()
 
-// appManager.buyApp(3)
+// appManager.buyApp(3) 
 // console.log(appManager.getCoreApps)
+
+// const supabase = useSupabaseClient()
+const user = useUser()
+
+const notifications = useNotifications()
+notifications.join()
+
+notifications.sendNotification({
+  user_id: user.value.id,
+  app_id: 1,
+  datas: null,
+  message: "Hello world",
+  title: 'I am here',
+  dates: new Date(+new Date() + 60000*1)
+})
+
 </script>
 
 

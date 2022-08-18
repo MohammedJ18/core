@@ -24,12 +24,13 @@ const loading = reactive({
     google: false,
 })
 
+
 const googleLogin = async () => {
     loading.google = true
     const { user, session, error } = await supabase.auth.signIn({
         provider: 'google',
     }, {
-        redirectTo: process.VERCEL_URL ?? 'http://localhost:3000',
+        redirectTo: import.meta.env.VITE_ENV ? 'https://development.enab.app' : ( import.meta.env.VITE_PRODUCTION ? 'https://enab.app' : 'http://localhost:3000' ),
     })
 }
 
