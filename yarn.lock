@@ -331,6 +331,36 @@
     pinia "^2.0.16"
     vue-toastification "^2.0.0-rc.5"
 
+"@enab/appstore@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@enab/appstore/-/appstore-1.0.6.tgz#b5d6bdf930d120ccdace98efe7abb29e8a612723"
+  integrity sha512-mJ/S0GcZz/9ygV9yi9I8WEUE7trbgVCKoqf7gI5QIL/lO8Y7BSJEZQmoX/oJ+x5ebz+SEK0N8UDp39g8hD9FAg==
+  dependencies:
+    "@enab/calculator" "^1.0.7"
+    "@enab/core" "^1.6.0"
+    "@enab/ui" "^1.4.4"
+    "@iconify/json" "^2.1.77"
+    "@nuxt/kit" "^3.0.0-rc.8"
+    "@nuxt/schema" "^3.0.0-rc.8"
+    "@nuxtjs/color-mode" "^3.1.4"
+    "@nuxtjs/composition-api" "^0.33.0"
+    "@nuxtjs/supabase" "^0.1.19"
+    "@pinia/nuxt" "^0.3.0"
+    "@tauri-apps/api" "^1.0.2"
+    "@unocss/inspector" "^0.44.2"
+    "@unocss/nuxt" "^0.44.0"
+    "@unocss/preset-attributify" "^0.44.1"
+    "@unocss/preset-icons" "^0.44.1"
+    "@unocss/preset-typography" "^0.44.1"
+    "@unocss/preset-web-fonts" "^0.44.1"
+    "@vueuse/core" "^9.0.2"
+    "@vueuse/motion" "^2.0.0-beta.18"
+    "@vueuse/nuxt" "^9.0.2"
+    mathjs "^11.0.1"
+    nuxt-lodash "^2.2.0"
+    pinia "^2.0.16"
+    vue-toastification "^2.0.0-rc.5"
+
 "@enab/calculator@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@enab/calculator/-/calculator-1.0.7.tgz#deff0b61e5e5c403a3167eb613da36ea38ae8d23"
@@ -571,10 +601,10 @@
     pinia "^2.0.16"
     vue-toastification "^2.0.0-rc.5"
 
-"@enab/ui@^1.4.7":
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/@enab/ui/-/ui-1.4.7.tgz#04dc8268083ed1389eb2cb697bdc440b3ba19c8f"
-  integrity sha512-jlL8MZz/3A8myIRkSw3uBv/hMZSk/EuHqojKHH3dycw0eDwC3Thjxlyek1Nkc/l9OVGIpHcq+hirt8XyCrU+Ow==
+"@enab/ui@^1.4.8":
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/@enab/ui/-/ui-1.4.8.tgz#81de81234ee11999493abee289e9e085666071ec"
+  integrity sha512-xcKF5KB+y32RMuH9NPNDfEc7gbYezhgGrgfz7qcfbJpEqmQfgMfIaF1Duw22SnMJCN4+iWpBE0p0q4bHNAqeCg==
   dependencies:
     "@enab/core" "^1.6.0"
     "@iconify/json" "^2.1.77"

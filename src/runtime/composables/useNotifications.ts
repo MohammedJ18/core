@@ -27,9 +27,22 @@ export const useNotifications = defineStore("notifications-store", {
             const notifications = supabase
                 .from('notifications')
                 .on('INSERT', payload => this.recieveNotification(payload.new))
-                .subscribe()
+                .subscribe(async (state) => {
+                    // if (state === 'SUBSCRIBED') {
+                        // now you can start broadcasting messages
+                        // sending a new message every second
+                        // setInterval(async () => {
+                        //   const status = await channel.send({
+                        //     type: 'broadcast',
+                        //     event: 'location',
+                        //     payload: { x: Math.random(), y: Math.random() },
+                        //   })
+                        //   console.log(state)
+                        // }, 1000)
+                    // }
+                })
             
-            notifications            
+            notifications
                 
             this.data = notifications
             this.fetch()

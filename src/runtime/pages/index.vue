@@ -30,8 +30,6 @@
         <component :app="component" :is="component.name" :key="'app-component-' + component.id"></component>
       </div>
 
-      <div>{{ notifications.getNotifications }}</div>
-
       <!-- Desktop Widgets -->
       <!-- <div min-w="1/4" @click="appManager.setFocus('')" flex="~" h="h-minus-bottombar" items="center" justify="center">
         <div w="full" overflow-y="scroll" h="minus-bottombar">
@@ -70,13 +68,15 @@ const user = useUser()
 const notifications = useNotifications()
 notifications.join()
 
-notifications.sendNotification({
-  user_id: user.value.id,
-  app_id: 1,
-  datas: null,
-  message: "Hello world",
-  title: 'I am here',
-  dates: new Date(+new Date() + 60000*1)
+onMounted(() => {
+  notifications.sendNotification({
+    user_id: user.value.id,
+    app_id: 1,
+    datas: null,
+    message: "Hello world",
+    title: 'I am here',
+    dates: new Date(+new Date() + 60000*1)
+  })
 })
 
 </script>
