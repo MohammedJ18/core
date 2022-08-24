@@ -55,6 +55,10 @@ export const useUserProfile = defineStore("user-profile", {
                 $toast.error('حدث خطأ اثناء تحديث الملف الشخصي')
                 return;
             }
+        },
+        async logout(){
+            const supabase = useSupabaseClient()
+            const { error } = await supabase.auth.signOut()
         }
     },
 });
